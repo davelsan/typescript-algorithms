@@ -1,4 +1,4 @@
-name: build
+name: symmetric-difference
 on:
   push:
     branches:
