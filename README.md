@@ -16,7 +16,7 @@
 
 ## Overview
 
-An offshoot of many other efforts out there, this repository is my own personal challenge: to prepare my future software developer self for the algorithmic trials and tribulations often faced during coding interviews, and perhaps in particular real world applications too.
+A TypeScript implementation of recurring interview algorithms.
 
 ## Index
 
