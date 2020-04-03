@@ -9,7 +9,7 @@
   <a href="https://codecov.io/gh/davelsan/typescript-algorithms">
     <img alt="Code Coverage" src="https://codecov.io/gh/davelsan/typescript-algorithms/branch/master/graph/badge.svg"/>
   </a>
-  <a href="https://github.com/davelsan/typescript-eslint/blob/master/LICENSE">
+  <a href="https://github.com/davelsan/typescript-algorithms/blob/master/LICENSE">
     <img alt="License" src="https://img.shields.io/github/license/davelsan/typescript-algorithms"/>
   </a>
 </p>
