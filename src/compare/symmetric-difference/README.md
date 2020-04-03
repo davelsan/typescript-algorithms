@@ -4,7 +4,7 @@
     <a href="https://actions-badge.atrox.dev/davelsan/typescript-algorithms/goto?ref=compare%2Fsymmetric-difference">
       <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/build/badge.svg"/>
     </a>
-    <a href="https://codecov.io/gh/davelsan/typescript-algorithms">
+    <a href="https://codecov.io/gh/davelsan/typescript-algorithms/branch/compare%2Fsymmetric-difference">
       <img alt="Code Coverage" src="https://codecov.io/gh/davelsan/typescript-algorithms/branch/compare/symmetric-difference/graph/badge.svg" />
     </a>
     <a href="https://github.com/davelsan/typescript-eslint/blob/master/LICENSE">
