@@ -1,12 +1,24 @@
 <h1 align="center">Symmetric Difference</h1>
 
+<p align="center">
+    <a href="https://actions-badge.atrox.dev/davelsan/typescript-algorithms/goto?ref=compare%2Fsymmetric-difference">
+      <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/build/badge.svg"/>
+    </a>
+    <a href="https://codecov.io/gh/davelsan/typescript-algorithms">
+      <img alt="Code Coverage" src="https://codecov.io/gh/davelsan/typescript-algorithms/branch/compare/symmetric-difference/graph/badge.svg" />
+    </a>
+    <a href="https://github.com/davelsan/typescript-eslint/blob/master/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/davelsan/angular-tailwind-eslint"/>
+    </a>
+</p>
+
 > The __symmetric difference__ (also __disjunctive union__) of two sets __A__ and __B__, is another set __C__ whose items are in either __A__ or __B__, but never in both.
 
 ## Considerations
 
-The overall shape of the algorithm is a single function that takes any number of arrays as input.
+The overall shape of the algorithm is a single function where:
 
-- The input takes the form of one or more __arrays__
+- The input is one or more __arrays__
 - The input can be empty or contain __duplicated__ values
 - If the input is a __single__ array, return its unique members
 - If the input is __empty__, return an empty array
