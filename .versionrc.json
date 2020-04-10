@@ -2,9 +2,9 @@
   "types": [
     { "type": "feat",     "section": "Features"  },
     { "type": "fix",      "section": "Bug Fixes" },
-    { "type": "refactor", "section": "Codebase"  },
-    { "type": "chore",    "section": "Project"   },
-    { "type": "test",     "section": "Tests"     },
+    { "type": "refactor", "hidden":  true        },
+    { "type": "chore",    "hidden":  true        },
+    { "type": "test",     "hidden":  true        },
     { "type": "docs",     "hidden":  true        },
     { "type": "style",    "hidden":  true        },
     { "type": "perf",     "hidden":  true        }

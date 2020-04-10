@@ -2,13 +2,28 @@
 
 <p align="center">Recurrent algorithms implemented in TypeScript</p>
 
+<p align="center">
+  <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Abuild">
+    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/build/badge.svg"/>
+  </a>
+  <a href="https://codecov.io/gh/davelsan/typescript-algorithms">
+    <img alt="Code Coverage" src="https://codecov.io/gh/davelsan/typescript-algorithms/branch/master/graph/badge.svg"/>
+  </a>
+  <a href="https://github.com/davelsan/typescript-algorithms/blob/master/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/davelsan/typescript-algorithms"/>
+  </a>
+</p>
+
 ## Overview
 
-An offshoot of many other efforts out there, this repository is my own personal challenge: to prepare my future software developer self for the algorithmic trials and tribulations often faced during coding interviews, and perhaps in particular real world applications too.
+A TypeScript implementation of recurring interview algorithms.
 
 ## Index
 
-> Comming soon
+| Algorithm | Compare | Search | Sort   | Graph
+| :-:       | :-:     | :-:    | :-:    | :-:
+| [Symmetric Difference](./src/compare/symmetric-difference) | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_multiplication_x:
+
 
 ## Development
 
@@ -34,4 +49,4 @@ Linting is configured to use [ESLint](https://eslint.org/) and [typescript-eslin
 
 ### Workflow
 
-This repository (more or less) adheres to the [git-flow](https://nvie.com/posts/a-successful-git-branching-model/) branching model. To automate the process (and try something fun), the `CHANGELOG` file is populated using the [standard-version](https://github.com/conventional-changelog/standard-version) utility package. [Conventional Commits](https://www.conventionalcommits.org/) are not enforced, but the whole thing depends on properly formatted commit messages.
+This repository (more or less) adheres to the [git-flow](https://nvie.com/posts/a-successful-git-branching-model/) branching model. To automate the process (and try something fun), the `CHANGELOG` file and version bumps are handled using the [standard-version](https://github.com/conventional-changelog/standard-version) utility package. [Conventional Commits](https://www.conventionalcommits.org/) are not enforced, but the whole thing depends on properly formatted commit messages.
