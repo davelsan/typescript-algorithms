@@ -16,9 +16,7 @@
 
 ## Overview
 
-This repository is a personal collection of recurring interview algorithms and data structures, implemented in TypeScript.
-
-The goal is to add one algorithm or data structure per week, up to a point where at least the most commonly used have been covered.
+This repository is a personal collection of recurring interview algorithms and data structures, implemented in TypeScript. The goal is to add one algorithm or data structure per week, up to a point where at least the most commonly used have been covered.
 
 ## Index
 
