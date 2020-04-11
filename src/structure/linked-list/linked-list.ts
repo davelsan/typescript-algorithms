@@ -168,7 +168,7 @@ export class LinkedList<T> {
   /* AUXILIARY */
 
   /**
-   * Links to adjacent nodes in the linked list
+   * Link two adjacent nodes in the linked list
    * @param prevNode previous node element in list
    * @param nextNode next node element in the list
    */
