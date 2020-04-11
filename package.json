@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "typescript-algorithms",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Recurrent algorithms implemented in TypeScript",
   "scripts": {
     "build": "rimraf lib && tsc -b .",
