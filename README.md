@@ -1,6 +1,6 @@
 <h1 align="center">TypeScript Algorithms</h1>
 
-<p align="center">Recurrent algorithms implemented in TypeScript</p>
+<p align="center">Recurrent algorithms and structures implemented in TypeScript</p>
 
 <p align="center">
   <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Abuild">
@@ -9,21 +9,31 @@
   <a href="https://codecov.io/gh/davelsan/typescript-algorithms">
     <img alt="Code Coverage" src="https://codecov.io/gh/davelsan/typescript-algorithms/branch/master/graph/badge.svg"/>
   </a>
-  <a href="https://github.com/davelsan/typescript-eslint/blob/master/LICENSE">
+  <a href="https://github.com/davelsan/typescript-algorithms/blob/master/LICENSE">
     <img alt="License" src="https://img.shields.io/github/license/davelsan/typescript-algorithms"/>
   </a>
 </p>
 
 ## Overview
 
-An offshoot of many other efforts out there, this repository is my own personal challenge: to prepare my future software developer self for the algorithmic trials and tribulations often faced during coding interviews, and perhaps in particular real world applications too.
+This repository is a personal collection of recurring interview algorithms and data structures, implemented in TypeScript. The goal is to add one algorithm or data structure per week, up to a point where at least the most commonly used have been covered.
 
 ## Index
+
+Below is a list of currently implemented algorithms and data structures.
+
+### Algorithms
 
 | Algorithm | Compare | Search | Sort   | Graph
 | :-:       | :-:     | :-:    | :-:    | :-:
 | [Symmetric Difference](./src/compare/symmetric-difference) | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_multiplication_x:
 
+### Data Structures
+
+
+| Linear | Tree | Graph
+| :-:    | :-:  | :-:
+| [Linked-List](./src/structure/linked-list) | - | -
 
 ## Development
 
