@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - compare/**
+      - release/**
 
 jobs:
   build:
