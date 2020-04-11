@@ -49,5 +49,5 @@ Below is the list of currently supported features and operations.
 
 ## Resources
 
-- [FreeCodeCamp - Data Structure Linked Lists](https://github.com/ashish9342/FreeCodeCamp/wiki/Data-Structure-Linked-Lists)
-- [GeeksforGeeks - Linked List Data Structure](https://www.geeksforgeeks.org/data-structures/linked-list/)
+- [FreeCodeCamp](https://guide.freecodecamp.org/computer-science/data-structures/linked-lists)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/data-structures/linked-list/)
