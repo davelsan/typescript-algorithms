@@ -1,4 +1,4 @@
-name: symmetric-difference
+name: linked-list
 on:
   push:
     branches:
@@ -34,6 +34,6 @@ jobs:
         run: pnpm install
 
       - name: Run unit tests
-        run: pnpm run test -- src/compare/symmetric-difference/
+        run: pnpm run test -- src/structure/linked-list
         env:
           CI: true
