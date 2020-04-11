@@ -6,9 +6,10 @@ module.exports = {
     },
   },
   testMatch: [
-    '**/src/**/?(*.)+(spec|test).ts'
+    '**/src/**/?(*.)+(spec|test).(js|ts)',
   ],
   transform: {
-    '^.+\\.ts$': 'ts-jest'
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.ts$': 'ts-jest',
   },
 };
