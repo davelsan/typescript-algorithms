@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - structure/linked-list
 
 jobs:
   build:
