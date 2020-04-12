@@ -33,7 +33,7 @@ export class LinkedList<T> {
   /* OPERATIONS */
 
   /**
-   * Add a node element to the end of the linked list
+   * Add a node element to the end of the list
    * @param value node element to add
    */
   public push (value: T): void {
@@ -53,14 +53,14 @@ export class LinkedList<T> {
   }
 
   /**
-   * Remove the last node element from the linked list
+   * Remove the last node element from the list
    */
   public pop (): T | undefined {
 
     const value = this._tail?.data;
 
     /* LIST EMPTY */
-    // Nothing to do, head and tail are undefined
+    if (!this._head || !this._tail) return value;
 
     /* LIST SIZE === 1 */
     if (this._size === 1) {
@@ -68,18 +68,11 @@ export class LinkedList<T> {
       this._head = this._tail = undefined;
     }
 
-    /* LIST SIZE === 2 */
-    else if (this._size === 2 && this._head) {
-
-      this._tail = this._head;
-      this._head.next = undefined;
-    }
-
-    /* LIST SIZE > 2 */
-    else if (this._size > 2 && this._tail) {
+    /* LIST SIZE >= 2 */
+    else {
 
       // Reverse-Link exists
-      if ( (this._type = ListType.Doubly) && this._tail.prev ) {
+      if (this._tail.prev) {
 
         this._tail = this._tail.prev;
         this._tail.next = undefined;
@@ -89,34 +82,21 @@ export class LinkedList<T> {
       else {
 
         let prev = this._head;
-        let curr = this._head?.next;
-        while (prev) {
+        let curr = this._head.next;
 
-          // prev = reverse node (memory)
-          // curr = current node (present)
-          // next = forward node (future)
-          const next = curr?.next;
-          if (next) {
-            prev = curr;
-            curr = next;
-          }
-          else {
-            this._tail = prev;
-            this._tail.next = undefined;
-            break;
-          }
+        while (curr) {
+          // [1,2,3,4,5]
+          // |tail|  |prev|  |curr|
+          //   1   ->  2   ->  3
+          //   2   ->  3   ->  4
+          //   3   ->  4   ->  5
+          //   4   ->  5   ->  undefined
+          this._tail = prev;
+          prev = curr;
+          curr = curr.next;
         }
       }
     }
-
-    /* UNEXPECTED RESULT */
-    // else {
-    //   // Singly size === 2: head is undefined
-    //   // Doubly size > 2: tail.prev is undefined
-    //   throw new Error (
-    //     `Error in Linked-List pop() operation: ${this._head, this._tail}`
-    //   );
-    // }
 
     // Update size
     this._size--;
@@ -125,7 +105,7 @@ export class LinkedList<T> {
   }
 
   /**
-   * Add a node element to the the beginning of the linked list
+   * Add a node element to the the beginning of the list
    * @param value node element to add
    */
   public unshift (value: T): void {
@@ -144,19 +124,27 @@ export class LinkedList<T> {
   }
 
   /**
-   * Remove the first element from the linked list
+   * Remove the first element from the list
    */
   public shift (): T | undefined {
 
-    // Retrieve first value
     const value = this._head?.data;
 
-    // Assign next node to head
-    this._head = this._head?.next;
+    /* EMPTY LIST  */
+    if (!this._head) return value;
 
-    // Unset reverse-link in doubly list
-    if (this._type === ListType.Doubly && this._head)
-      this._head.prev = undefined;
+    /* LIST SIZE = 1 */
+    if (this._size === 1) this._head = this._tail = undefined;
+
+    /* LIST SIZE >= 2 */
+    else {
+
+      // Assign next node to head
+      this._head = this._head.next;
+
+      // Unset reverse-link in doubly list
+      if (this._head?.prev) this._head.prev = undefined;
+    }
 
     // Update size
     this._size--;
@@ -168,7 +156,7 @@ export class LinkedList<T> {
   /* AUXILIARY */
 
   /**
-   * Link two adjacent nodes in the linked list
+   * Link two adjacent nodes in the list
    * @param prevNode previous node element in list
    * @param nextNode next node element in the list
    */
