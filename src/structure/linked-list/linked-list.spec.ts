@@ -136,4 +136,24 @@ describe ('shift() operations', () => {
     expect(doubly.first).toEqual(items[first+1]);
   });
 
+  test ('shift#2: corrently handle an empty list', () => {
+
+    const value = singly.shift();
+
+    expect(value).toBe(undefined);
+    expect(singly.first).toBe(undefined);
+    expect(singly.last).toBe(undefined);
+  });
+
+  test ('shift#3: correctly handle a one-element list', () => {
+
+    singly.push(items[first]);
+
+    const value = singly.shift();
+
+    expect(value).toEqual(items[first]);
+    expect(singly.first).toBe(undefined);
+    expect(singly.last).toBe(undefined);
+  });
+
 });
