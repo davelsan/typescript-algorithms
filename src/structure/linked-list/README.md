@@ -42,8 +42,6 @@ Below is the list of currently supported features and operations.
 
 ## To-Do
 
-- [ ] Study a possible rework of the `Node` interface to a more complex type, so that `pop()` operations do not have to check for the existence of a `prev` pointer in `doubly` linked-lists.
-
 - [ ] Investigate the possibility of adding some sort of `type guard` to check wether the `head` and `tail` pointers are `undefined`, based on the `size` property.
 
 
