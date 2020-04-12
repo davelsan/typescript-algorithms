@@ -10,7 +10,7 @@
 
 ## Considerations
 
-The overall shape of the algorithm is a single function that can cumulatively compares multiple arrays, iterating each array exactly once, and returns a new array with their globally unique members (which can be empty, if none are unique).
+The overall shape of the algorithm is a single function that __cumulatively compares__ multiple arrays, iterating each array __exactly once__, and returns a new array with the globally __unique members__ (which can be empty if none are unique).
 
 ## Features
 
