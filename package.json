@@ -7,8 +7,7 @@
     "build": "rimraf lib && tsc -b .",
     "lint": "eslint src/**/*.ts",
     "test": "rimraf coverage && jest --coverage --verbose",
-    "test:cov": "http-server -o ./coverage/lcov-report",
-    "release": "standard-version"
+    "test:cov": "http-server -o ./coverage/lcov-report"
   },
   "keywords": [
     "algorithms",
@@ -31,7 +30,6 @@
     "http-server": "^0.12.1",
     "jest": "^25.3.0",
     "rimraf": "^3.0.2",
-    "standard-version": "^7.1.0",
     "ts-jest": "^25.3.1",
     "typescript": "^3.8.3"
   }
