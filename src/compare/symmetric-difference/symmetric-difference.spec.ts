@@ -46,13 +46,14 @@ describe('Return the correct symmetric difference', () => {
     const obj1 = { a: 1, b: 2             };
     const obj2 = {       b: 2, c: 3,      };
     const obj3 = {       b: 2,       d: 4 };
+    const obj4 = {       b: 2,       d: 4 };
 
     const arr1 = [ obj1,       obj3 ];
     const arr2 = [ obj1, obj2,      ];
-    const arr3 = [       obj2       ];
+    const arr3 = [       obj2, obj4 ];
 
     const result = symDiff<Obj>(arr1, arr2, arr3);
-    expect(result).toEqual([ obj3 ]);
+    expect(result).toEqual([ obj3, obj4 ]);
   });
 
 });
