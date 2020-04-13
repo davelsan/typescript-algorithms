@@ -56,7 +56,3 @@ Unit tests are configured to use [Jest](https://jestjs.io/) and [ts-jest](https:
 ### Lint
 
 Linting is configured to use [ESLint](https://eslint.org/) and [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint). That is the only formatting guide in the project.
-
-### Workflow
-
-This repository (more or less) adheres to the [git-flow](https://nvie.com/posts/a-successful-git-branching-model/) branching model. To automate the process (and try something fun), the `CHANGELOG` file and version bumps are handled using the [standard-version](https://github.com/conventional-changelog/standard-version) utility package. [Conventional Commits](https://www.conventionalcommits.org/) are not enforced, but the whole thing depends on properly formatted commit messages.

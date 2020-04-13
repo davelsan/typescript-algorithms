@@ -1,8 +1,5 @@
 name: symmetric-difference
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - develop
