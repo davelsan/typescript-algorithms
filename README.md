@@ -1,6 +1,6 @@
 <h1 align="center">TypeScript Algorithms</h1>
 
-<p align="center">Recurrent algorithms and structures implemented in TypeScript</p>
+<p align="center">Recurrent algorithms and data structures implemented in TypeScript</p>
 
 <p align="center">
   <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Abuild">
@@ -46,7 +46,6 @@ pnpm run build      # compile *.ts files
 pnpm run lint       # lint *.ts files
 pnpm run test       # run unit tests
 pnpm run test:cov   # serve coverage results
-pnpm run release    # standard-version prepare for release
 ```
 
 ### Tests
