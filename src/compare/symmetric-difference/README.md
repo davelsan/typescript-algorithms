@@ -10,153 +10,63 @@
 
 ## Considerations
 
-The overall shape of the algorithm is a single function where:
+The overall shape of the algorithm is a single function that __cumulatively compares__ a multiple array input, iterating each __exactly once__, and outputs a new array with the globally __unique members__ (which can be empty if none are unique). Because the algorithm uses the built-in [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object to remove duplicates and store array members, unique members can be __primitive values__ (e.g. `string`, `number`) or custom __object references__.
 
-- The input is one or more __arrays__
-- The input can be empty or contain __duplicated__ values
-- If the input is a __single__ array, return its unique members
-- If the input is __empty__, return an empty array
+## Features
+
+### Logic
+
+- Can compare more than two arrays
+- Performs a cumulative comparison [ (a<sub>0</sub> , a<sub>1</sub>), (a<sub>0</sub> , a<sub>2</sub>) (a<sub>1</sub> , a<sub>2</sub>) ... (a<sub>i</sub> , a<sub>j</sub>) ]
+- Has `O(n)` time complexity
+
+### I/O
+
+- Input is one or more __arrays__
+- Input can be empty or contain __duplicated__ values
+- If the input is a __single__ array, the output is its unique members
+- If the input is __empty__, the output is an empty array
+
+### Diff
+
+- Use the built-in `Set` object to store unique primitive _values_ or object _references_.
+
+## Examples
+
+_Value_ comparison for primitive types
 
 ```ts
-export function symDiff<T> (...arrays: T[][]): T[] {
+import { symDiff } from './symmetric-difference';
 
-  /* logic here... */
+const inputArr1 = ['a','b','c'        ];
+const inputArr2 = [        'c','d','e'];
+const inputArr3 = ['a',    'c',    'e'];
+
+symDiff(inputArr1, inputArr2, inputArr3); //=> [ 'b', 'd' ]
+```
+
+_Reference_ comparison for custom types.
+
+```ts
+import { symDiff } from './symmetric-difference';
+
+type Obj = {
+  [key: string]: number;
 }
-```
 
+const obj1 = { a: 1, b: 2             };
+const obj2 = {       b: 2, c: 3,      };
+const obj3 = {       b: 2,       d: 4 };
+const obj4 = {       b: 2,       d: 4 }; // <- new reference
 
-## Code
+const arr1 = [ obj1,       obj3 ];
+const arr2 = [ obj1, obj2,      ];
+const arr3 = [       obj2  obj4 ];
 
-### Input: Single or Empty
-
-Given the above considerations, two type guards can be used to determine whether any computation is necessary at all.
-
-```ts
-export function symDiff<T> (...arrays: T[][]): T[] {
-
-  if ( isSingle(arrays) ) return [ ...new Set(arrays[0]) ];
-  if ( isEmpty(arrays) ) return [ ];
-
-  /* logic to compute symmetric difference... */
-}
-```
-
-### Input: Two or More
-
-Assuming the input is two or more arrays, the code can be divided in two parts:
-
-- A `reducer` function to iterate input arrays and return the computed symmetric difference
-- A `memory` set to store each processed value and prevents the addition of previously deleted values
-
-```ts
-export function symDiff<T> (...arrays: T[][]): T[] {
-
-  // type guards...
-
-  // store processed values during each reducer iteration
-  const memory = new Set<T>;
-
-  // iterate arrays and compute the symmetric difference
-  const reducer = (
-    accumulator: Set<T>, values: T[], index: number
-  ): Set<T> => {
-
-    /* logic here... */
-  };
-
-  // execute reducer using an empty accumulator set for the initial value
-  const result = arrays.reduce(
-
-    /* REDUCER */
-    reducer,
-
-    /* ACCUMULATOR */
-    new Set<T>()
-  );
-
-  // output the symmetric difference as an array type
-  return [ ...result ];
-}
-```
-
-#### Reducer
-
-__1.__ The input array is converted to a set of unique elements.
-
-```ts
-const reducer = (
-  accumulator: Set<T>, values: T[], index: number
-): Set<T> => {
-
-  // 1 Collection of unique numbers only
-  const uniques = new Set(values);
-
-  // 2. First iteration: initialize memory and result
-
-  // 3. Subsequent iterations: compare, mutate, remember
-
-  // 4. Return result for next reducer iteration
-  return accumulator;
-}
-```
-
-__2.__ In the first iteration, the set is both the first return and initial memory
-
-```ts
-const reducer = (
-  accumulator: Set<T>, values: T[], index: number
-): Set<T> => {
-
-  // 1. Collection of unique numbers only
-
-  // 2. First iteration: initialize memory and result
-  if (index === 0) {
-    memory = new Set(values);
-    return uniques;
-  }
-
-  // 3. Subsequent iterations: compare, mutate, remember
-
-  // 4. Return result for next reducer iteration
-  return accumulator;
-};
-```
-
-__3.__ In subsequent iterations, the algorithm can execute any of these three operations:
-
-- __REMOVE__ existing values from the accumulator
-- __SKIP__ already processed values
-- __ADD__ new values to both the acumulator and the memory sets
-
-```ts
-const reducer = (
-  accumulator: Set<T>, values: T[], index: number
-): Set<T> => {
-
-  // 1. Collection of unique numbers only
-
-  // 2. First iteration: initialize memory and result
-
-  // 3. Subsequent iterations: compare, mutate, remember
-  for (const x of uniques) {
-
-    // REMOVE: value intersects
-    if (accumulator.has(x) && accumulator.delete(x)) continue;
-
-    // SKIP: value already processed
-    if (memory.has(x)) continue;
-
-    // ADD: value is new
-    accumulator.add(x);
-    memory.add(x);
-  }
-
-  // 4. Return result for next reducer iteration
-  return accumulator;
-};
+symDiff<Obj>(arr1, arr2, arr3); //=> [ { b: 2, d: 4 }, { b: 2, d: 4 } ]
 ```
 
 ### Resources
 
-- [DEV - Symmetric Difference Interview Question](https://dev.to/nas5w/exploring-the-symmetric-difference-interview-question-3bg5)
-- [FreeCodeCamp - Algorithm Symmetric Difference](https://github.com/ashish9342/FreeCodeCamp/wiki/Algorithm-Symmetric-Difference)
+- [DEV](https://dev.to/nas5w/exploring-the-symmetric-difference-interview-question-3bg5)
+- [FreeCodeCamp](https://github.com/ashish9342/FreeCodeCamp/wiki/Algorithm-Symmetric-Difference)
