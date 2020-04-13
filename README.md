@@ -1,6 +1,6 @@
 <h1 align="center">TypeScript Algorithms</h1>
 
-<p align="center">Recurrent algorithms and structures implemented in TypeScript</p>
+<p align="center">Recurrent algorithms and data structures implemented in TypeScript</p>
 
 <p align="center">
   <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Abuild">
