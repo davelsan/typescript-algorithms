@@ -10,7 +10,7 @@
 
 ## Considerations
 
-The overall shape of the algorithm is a single function that __cumulatively compares__ a multiple array input, iterating each __exactly once__, and outputs a new array with the globally __unique members__ (which can be empty if none are unique).
+The overall shape of the algorithm is a single function that __cumulatively compares__ a multiple array input, iterating each __exactly once__, and outputs a new array with the globally __unique members__ (which can be empty if none are unique). Because the algorithm uses the built-in [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object to remove duplicates and store array members, unique members can be __primitive values__ (e.g. `string`, `number`) or custom __object references__.
 
 ## Features
 
@@ -27,9 +27,13 @@ The overall shape of the algorithm is a single function that __cumulatively comp
 - If the input is a __single__ array, the output is its unique members
 - If the input is __empty__, the output is an empty array
 
+### Diff
+
+- Use the built-in `Set` object to store unique primitive _values_ or object _references_.
+
 ## Examples
 
-Value comparison for primitive types (e.g. `string`, `number`).
+_Value_ comparison for primitive types
 
 ```ts
 import { symDiff } from './symmetric-difference';
@@ -41,7 +45,7 @@ const inputArr3 = ['a',    'c',    'e'];
 symDiff(inputArr1, inputArr2, inputArr3); //=> [ 'b', 'd' ]
 ```
 
-Value comparison for custom types.
+_Reference_ comparison for custom types.
 
 ```ts
 import { symDiff } from './symmetric-difference';
@@ -53,12 +57,13 @@ type Obj = {
 const obj1 = { a: 1, b: 2             };
 const obj2 = {       b: 2, c: 3,      };
 const obj3 = {       b: 2,       d: 4 };
+const obj4 = {       b: 2,       d: 4 }; // <- new reference
 
 const arr1 = [ obj1,       obj3 ];
 const arr2 = [ obj1, obj2,      ];
-const arr3 = [       obj2       ];
+const arr3 = [       obj2  obj4 ];
 
-symDiff<Obj>(arr1, arr2, arr3); //=> [ { b: 2, d: 4 } ]
+symDiff<Obj>(arr1, arr2, arr3); //=> [ { b: 2, d: 4 }, { b: 2, d: 4 } ]
 ```
 
 ### Resources
