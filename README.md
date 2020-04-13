@@ -46,7 +46,6 @@ pnpm run build      # compile *.ts files
 pnpm run lint       # lint *.ts files
 pnpm run test       # run unit tests
 pnpm run test:cov   # serve coverage results
-pnpm run release    # standard-version prepare for release
 ```
 
 ### Tests
