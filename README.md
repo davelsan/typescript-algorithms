@@ -45,12 +45,11 @@ This library is configured to work with [pnpm](https://pnpm.js.org/). The corres
 pnpm run build      # compile *.ts files
 pnpm run lint       # lint *.ts files
 pnpm run test       # run unit tests
-pnpm run test:cov   # serve coverage results
 ```
 
 ### Tests
 
-Unit tests are configured to use [Jest](https://jestjs.io/) and [ts-jest](https://kulshekhar.github.io/ts-jest/). Test results are printed to standard-output, but a simple [http-server](https://www.npmjs.com/package/http-server) can be launched to visually review code coverage.
+Unit tests are configured to use [Jest](https://jestjs.io/) and [ts-jest](https://kulshekhar.github.io/ts-jest/). Results are printed to standard-output.
 
 ### Lint
 

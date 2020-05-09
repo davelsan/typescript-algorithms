@@ -6,8 +6,7 @@
   "scripts": {
     "build": "rimraf lib && tsc -b .",
     "lint": "eslint src/**/*.ts",
-    "test": "rimraf coverage && jest --coverage --verbose",
-    "test:cov": "http-server -o ./coverage/lcov-report/index.html"
+    "test": "rimraf coverage && jest --coverage --verbose"
   },
   "keywords": [
     "algorithms",
@@ -27,7 +26,6 @@
     "@typescript-eslint/parser": "^2.31.0",
     "eslint": "^7.0.0",
     "eslint-plugin-jest": "^23.10.0",
-    "http-server": "^0.12.3",
     "jest": "^25.5.4",
     "rimraf": "^3.0.2",
     "ts-jest": "^25.5.1",
