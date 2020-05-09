@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Asymmetric-difference">
-    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/symmetric-difference/badge.svg"/>
+    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/symmetric-difference/badge.svg?branch=master"/>
   </a>
 </p>
 
