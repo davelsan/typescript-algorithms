@@ -1,4 +1,4 @@
-name: breath-first-search
+name: breadth-first-search
 on:
   pull_request:
     branches:
@@ -34,6 +34,6 @@ jobs:
         run: pnpm install
 
       - name: Run unit tests
-        run: pnpm run test -- src/search/breath-first-search
+        run: pnpm run test -- src/search/breadth-first-search
         env:
           CI: true

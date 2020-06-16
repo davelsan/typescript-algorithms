@@ -1,8 +1,8 @@
 <h1 align=center>(Graph) Breadth-First Search</h1>
 
 <p align="center">
-  <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Abreath-first-search">
-    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/Breadth-first-search/badge.svg?branch=master"/>
+  <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Abreadth-first-search">
+    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/breadth-first-search/badge.svg?branch=master"/>
   </a>
 </p>
 
