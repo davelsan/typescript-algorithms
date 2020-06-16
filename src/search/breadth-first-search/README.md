@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Abreadth-first-search">
-    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/breadth-first-search/badge.svg?branch=master"/>
+    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/breadth-first-search/badge.svg?branch=develop"/>
   </a>
 </p>
 

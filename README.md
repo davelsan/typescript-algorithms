@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Abuild">
-    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/build/badge.svg?branch=master"/>
+    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/build/badge.svg?branch=develop"/>
   </a>
   <a href="https://codecov.io/gh/davelsan/typescript-algorithms">
     <img alt="Code Coverage" src="https://codecov.io/gh/davelsan/typescript-algorithms/branch/master/graph/badge.svg"/>
