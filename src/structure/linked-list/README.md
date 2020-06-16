@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/davelsan/typescript-algorithms/actions?query=workflow%3Alinked-list">
-    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/linked-list/badge.svg?branch=master"/>
+    <img alt="Build Status" src="https://github.com/davelsan/typescript-algorithms/workflows/linked-list/badge.svg?branch=develop"/>
   </a>
 </p>
 
