@@ -4,7 +4,7 @@
   "version": "0.1.1",
   "description": "Recurrent algorithms implemented in TypeScript",
   "scripts": {
-    "build": "rimraf lib && tsc -b .",
+    "build": "rimraf lib && tsc --project tsconfig.build.json",
     "lint": "eslint src/**/*.ts",
     "test": "rimraf coverage && jest --coverage --verbose"
   },

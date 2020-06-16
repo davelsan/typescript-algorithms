@@ -16,24 +16,26 @@
 
 ## Overview
 
-This repository is a personal collection of recurring interview algorithms and data structures, implemented in TypeScript. The goal is to add one algorithm or data structure per week, up to a point where at least the most commonly used have been covered.
+This repository is a personal collection of recurring interview algorithms and data structures, implemented in TypeScript. The goal is to slowly keep adding algorithms and data structures, up to a point where at least the most commonly used have been covered.
 
 ## Index
 
-Below is a list of currently implemented algorithms and data structures.
+Below are the lists of currently implemented algorithms and data structures.
 
 ### Algorithms
 
-| Algorithm | Compare | Search | Sort   | Graph
-| :-:       | :-:     | :-:    | :-:    | :-:
-| [Symmetric Difference](./src/compare/symmetric-difference) | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_multiplication_x:
+Algorithm | Compare | Search | Sort   | Linear | Graph | Tree
+:-:       | :-:     | :-:    | :-:    | :-:    | :-:   | :-:
+[Breadth-First Search](./src/search/breadth-first-search)  | :heavy_multiplication_x: | :heavy_check_mark:       | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_check_mark:       | :heavy_check_mark:
+[Symmetric Difference](./src/compare/symmetric-difference) | :heavy_check_mark:       | :heavy_multiplication_x: | :heavy_multiplication_x: | :heavy_check_mark:       | :heavy_multiplication_x: | :heavy_multiplication_x:
+
 
 ### Data Structures
 
 
-| Linear | Tree | Graph
-| :-:    | :-:  | :-:
-| [Linked-List](./src/structure/linked-list) | - | -
+Linear | Tree | Graph
+:-:    | :-:  | :-:
+[Linked-List](./src/structure/linked-list) | - | -
 
 ## Development
 
